@@ -1,8 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import { VStack, Stack, Flex, Heading, Button } from '@chakra-ui/react';
 import { FaUserCircle } from 'react-icons/fa';
-
-import Scenes03 from '../../public/svg/Scenes03.svg';
 
 const CTA = () => (
     <VStack
@@ -30,7 +29,12 @@ const Hero = () => (
     <Stack flex="0 0 100%" direction={{ base: 'column-reverse', md: 'row' }} py="4rem">
         <CTA />
         <Flex flex="1 0 calc(50% - 1rem)">
-            <Scenes03 />
+            <Image
+                src="/svg/Scenes03.svg"
+                alt="123"
+                width="1000"
+                height="100"
+            />
         </Flex>
     </Stack>
 );
