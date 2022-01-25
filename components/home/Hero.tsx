@@ -27,15 +27,7 @@ const CTA = () => (
 );
 
 const Hero = () => (
-    <Stack
-        flex="0 0 100%"
-        direction={{ base: 'column-reverse', md: 'row' }}
-        // justify={{
-        //     base: 'center',
-        //     md: 'space-between',
-        // }}
-        // spacing={['2.5vh', '10vh']}
-    >
+    <Stack flex="0 0 100%" direction={{ base: 'column-reverse', md: 'row' }} py="4rem">
         <CTA />
         <Flex flex="1 0 calc(50% - 1rem)">
             <Scenes03 />
