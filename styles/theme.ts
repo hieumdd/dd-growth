@@ -40,7 +40,7 @@ const theme = extendTheme({
     components: {
         Container: {
             baseStyle: {
-                maxW: 'container.lg',
+                maxW: 'container.xl',
             },
         },
         Link: {

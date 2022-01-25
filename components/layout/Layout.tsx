@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Container, VStack, Divider } from '@chakra-ui/layout';
 
 import Header from './Header';
 import Footer from './Footer';
-import SEO from './SEO';
+import SEO, { SEOProps } from './SEO';
 // import ScrollToTop from './ScrollToTop';
 
-const Layout = ({ title, children }) => (
+type LayoutProps = SEOProps & { children: ReactNode };
+
+const Layout = ({ title, description, children }: LayoutProps) => (
     <>
-        <SEO title={title} />
+        <SEO title={title} description={description} />
         <Header />
         <Container
             as={VStack}
-            py="10vh"
+            py='8rem'
             alignItems={{ base: 'center', md: 'flex-start' }}
             spacing="4rem"
             divider={<Divider />}
@@ -20,7 +22,7 @@ const Layout = ({ title, children }) => (
             {children}
         </Container>
         {/* <ScrollToTop /> */}
-        <Footer />
+        {/* <Footer /> */}
     </>
 );
 

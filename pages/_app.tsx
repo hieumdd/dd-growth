@@ -1,8 +1,19 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import React from 'react';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+import { ChakraProvider } from '@chakra-ui/react';
 
-export default MyApp
+import theme from '../styles/theme';
+
+const MyApp = ({ Component, pageProps }: AppProps) => (
+  <ChakraProvider theme={theme}>
+    <Head>
+      <title>dd-Growth</title>
+      <link rel="shortcut icon" href="/favicon.ico" />
+    </Head>
+    <Component {...pageProps} />
+  </ChakraProvider>
+);
+
+export default MyApp;
