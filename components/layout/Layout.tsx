@@ -15,7 +15,7 @@ const Layout = ({ title, description, children }: LayoutProps) => (
         <Container
             as={VStack}
             py='8rem'
-            alignItems={{ base: 'center', md: 'flex-start' }}
+            alignItems="stretch"
             spacing="4rem"
             divider={<Divider />}
         >

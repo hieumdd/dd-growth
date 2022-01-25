@@ -8,7 +8,7 @@ const CTA = () => (
     <VStack
         align={{ base: 'center', md: 'flex-start' }}
         textAlign={{ base: 'center', md: 'left' }}
-        flex="1 0 50%"
+        flex="1 0 calc(50% - 1rem)"
         spacing={{ base: '1rem', md: '2rem' }}
     >
         <Heading as="h1" fontSize="4rem">
@@ -28,16 +28,16 @@ const CTA = () => (
 
 const Hero = () => (
     <Stack
-        align="center"
+        flex="0 0 100%"
         direction={{ base: 'column-reverse', md: 'row' }}
-        justify={{
-            base: 'center',
-            md: 'space-between',
-        }}
-        spacing={['2.5vh', '10vh']}
+        // justify={{
+        //     base: 'center',
+        //     md: 'space-between',
+        // }}
+        // spacing={['2.5vh', '10vh']}
     >
         <CTA />
-        <Flex flex="0 1 50%">
+        <Flex flex="1 0 calc(50% - 1rem)">
             <Scenes03 />
         </Flex>
     </Stack>
